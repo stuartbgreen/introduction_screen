@@ -196,6 +196,7 @@ class IntroductionScreenState extends State<IntroductionScreen> {
     return Scaffold(
       backgroundColor: widget.globalBackgroundColor,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,        
         children: [
           Expanded(
             child: NotificationListener<ScrollNotification>(

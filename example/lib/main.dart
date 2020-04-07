@@ -58,8 +58,8 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Container(
-              height: 500,
+            Expanded(
+              flex: 3,
               child: IntroductionScreen(
                 key: introKey,
                 pages: [
@@ -138,10 +138,10 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
               ),
             ),
             // ====================================================== Login/Sign up buttons
-            Container(
-              padding: EdgeInsets.only(top:13),
+            Expanded(
+              flex: 1,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   //====================================================== Sign up
                   ButtonTheme(

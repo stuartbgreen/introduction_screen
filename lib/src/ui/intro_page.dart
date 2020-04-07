@@ -14,15 +14,14 @@ class IntroPage extends StatelessWidget {
       decoration: page.decoration.boxDecoration,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
           if (page.image != null)
             Padding(
               padding: page.decoration.imagePadding,
               child: page.image,
             ),
-          Expanded(
-            flex: 1,
+          Flexible(
             child: SingleChildScrollView(
               physics: const BouncingScrollPhysics(),
               child: IntroContent(page: page),
