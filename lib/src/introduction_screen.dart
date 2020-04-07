@@ -209,40 +209,38 @@ class IntroductionScreenState extends State<IntroductionScreen> {
             ),
           ),
           Positioned(
-            bottom: 0.0,
+            bottom: 16.0,
             left: 16.0,
             right: 16.0,
-            child: SafeArea(
-              child: Row(
-                children: [
-                  Expanded(
-                    flex: widget.skipFlex,
-                    child: isSkipBtn
-                        ? skipBtn
-                        : Opacity(opacity: 0.0, child: skipBtn),
+            child: Row(
+              children: [
+                Expanded(
+                  flex: widget.skipFlex,
+                  child: isSkipBtn
+                      ? skipBtn
+                      : Opacity(opacity: 0.0, child: skipBtn),
+                ),
+                Expanded(
+                  flex: widget.dotsFlex,
+                  child: Center(
+                    child: widget.isProgress
+                        ? DotsIndicator(
+                            dotsCount: widget.pages.length,
+                            position: _currentPage,
+                            decorator: widget.dotsDecorator,
+                          )
+                        : const SizedBox(),
                   ),
-                  Expanded(
-                    flex: widget.dotsFlex,
-                    child: Center(
-                      child: widget.isProgress
-                          ? DotsIndicator(
-                              dotsCount: widget.pages.length,
-                              position: _currentPage,
-                              decorator: widget.dotsDecorator,
-                            )
-                          : const SizedBox(),
-                    ),
-                  ),
-                  Expanded(
-                    flex: widget.nextFlex,
-                    child: isLastPage
-                        ? doneBtn
-                        : widget.showNextButton
-                            ? nextBtn
-                            : Opacity(opacity: 0.0, child: nextBtn),
-                  ),
-                ],
-              ),
+                ),
+                Expanded(
+                  flex: widget.nextFlex,
+                  child: isLastPage
+                      ? doneBtn
+                      : widget.showNextButton
+                          ? nextBtn
+                          : Opacity(opacity: 0.0, child: nextBtn),
+                ),
+              ],
             ),
           ),
         ],
