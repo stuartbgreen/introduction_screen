@@ -17,7 +17,7 @@ class IntroPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           if (page.image != null)
-            Expanded(
+            Flexible(
               flex: 2,
               child: Padding(
                 padding: page.decoration.imagePadding,
