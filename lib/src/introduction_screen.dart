@@ -197,7 +197,7 @@ class IntroductionScreenState extends State<IntroductionScreen> {
       backgroundColor: widget.globalBackgroundColor,
       body: Column(
         children: [
-          Flexible(
+          Expanded(
             child: NotificationListener<ScrollNotification>(
               onNotification: _onScroll,
               child: PageView(

@@ -36,8 +36,8 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
 
   Widget _buildImage(String assetName) {
     return Align(
-      child: Image.asset('assets/$assetName.jpg', height: 900.0),
-      alignment: Alignment.bottomCenter,
+      child: Image.asset('assets/$assetName.jpg', height: 350.0),
+      alignment: Alignment.topCenter,
     );
   }
 
@@ -59,7 +59,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              height: 300,
+              height: 500,
               child: IntroductionScreen(
                 key: introKey,
                 pages: [
@@ -137,57 +137,57 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                 ),
               ),
             ),
-            // // ====================================================== Login/Sign up buttons
-            // Container(
-            //   padding: EdgeInsets.only(top:13),
-            //   child: Column(
-            //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            //     children: <Widget>[
-            //       //====================================================== Sign up
-            //       ButtonTheme(
-            //         minWidth: 300.0,
-            //         height: 50.0,
-            //         child: RaisedButton(
-            //           onPressed: () {
-            //           },
-            //           color: Colors.red,
-            //           shape: RoundedRectangleBorder(
-            //             borderRadius: new BorderRadius.circular(18.0),
-            //           ),
-            //           child: Text(
-            //             'Sign up',
-            //             style: TextStyle(fontSize: 18, color: Colors.white),
-            //           ),
-            //         ),
-            //       ),
-            //       //====================================================== Sign in
-            //       FlatButton(
-            //         padding: EdgeInsets.only(top: 13),
-            //         onPressed: () {
-            //         },
-            //         child: Row(
-            //           mainAxisAlignment: MainAxisAlignment.center,
-            //           children: <Widget>[
-            //             Text(
-            //               'Already have an account?',
-            //             ),
-            //             Text(
-            //               ' Login',                          
-            //             ),
-            //           ],
-            //         ),
-            //       ),
-            //       //====================================================== Set up later
-            //       FlatButton(
-            //         onPressed: () {
-            //         },
-            //         child: Text(
-            //           'Set up later',
-            //         ),
-            //       ),
-            //     ],
-            //   ),
-            // ),
+            // ====================================================== Login/Sign up buttons
+            Container(
+              padding: EdgeInsets.only(top:13),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  //====================================================== Sign up
+                  ButtonTheme(
+                    minWidth: 300.0,
+                    height: 50.0,
+                    child: RaisedButton(
+                      onPressed: () {
+                      },
+                      color: Colors.red,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(18.0),
+                      ),
+                      child: Text(
+                        'Sign up',
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      ),
+                    ),
+                  ),
+                  //====================================================== Sign in
+                  FlatButton(
+                    padding: EdgeInsets.only(top: 13),
+                    onPressed: () {
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'Already have an account?',
+                        ),
+                        Text(
+                          ' Login',                          
+                        ),
+                      ],
+                    ),
+                  ),
+                  //====================================================== Set up later
+                  FlatButton(
+                    onPressed: () {
+                    },
+                    child: Text(
+                      'Set up later',
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
