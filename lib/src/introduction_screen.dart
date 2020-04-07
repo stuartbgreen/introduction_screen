@@ -195,23 +195,22 @@ class IntroductionScreenState extends State<IntroductionScreen> {
 
     return Scaffold(
       backgroundColor: widget.globalBackgroundColor,
-      body: Stack(
+      body: Column(
         children: [
-          NotificationListener<ScrollNotification>(
-            onNotification: _onScroll,
-            child: PageView(
-              controller: _pageController,
-              physics: widget.freeze
-                  ? const NeverScrollableScrollPhysics()
-                  : const BouncingScrollPhysics(),
-              children: widget.pages.map((p) => IntroPage(page: p)).toList(),
-              onPageChanged: widget.onChange,
+          Flexible(
+            child: NotificationListener<ScrollNotification>(
+              onNotification: _onScroll,
+              child: PageView(
+                controller: _pageController,
+                physics: widget.freeze
+                    ? const NeverScrollableScrollPhysics()
+                    : const BouncingScrollPhysics(),
+                children: widget.pages.map((p) => IntroPage(page: p)).toList(),
+                onPageChanged: widget.onChange,
+              ),
             ),
           ),
-          Positioned(
-            bottom: 16.0,
-            left: 16.0,
-            right: 16.0,
+          Container(
             child: Row(
               children: [
                 Expanded(
